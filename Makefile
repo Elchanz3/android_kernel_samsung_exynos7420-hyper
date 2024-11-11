@@ -194,12 +194,11 @@ SUBARCH := $(shell uname -m | sed -e s/i.86/x86/ -e s/x86_64/x86/ \
 # Note: Some architectures assign CROSS_COMPILE in their arch/*/Makefile
 
 ARCH		?=arm64
-CROSS_COMPILE   ?= ../PLATFORM/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
-#CROSS_COMPILE   ?= /opt/toolchains/aarch64-linux-android-4.9/bin/aarch64-linux-android-
+CROSS_COMPILE   ?= /home/chanz22/tc/uber_aarch64-linux-android-4.9/bin/aarch64-linux-android-
 
 ifeq ($(shell uname -s),Linux)
   ifeq ($(shell uname -m),x86_64)
-    override CROSS_COMPILE	:= $(srctree)/../../../prebuilts/linaro/linux-x86/aarch64/bin/aarch64-linux-gnu-
+    override CROSS_COMPILE	:= /home/chanz22/tc/gcc-linaro-6.1.1/bin/aarch64-linux-gnu-
   endif
 endif
 
